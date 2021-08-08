@@ -4,7 +4,7 @@ function ProjectScreen() {
   return (
     <Element>
       <center
-        className="grid place-items-center bg-red-800 bg-opacity-0 h-screen overflow-x-hidden"
+        className="grid place-items-center bg-red-800 bg-opacity-5 h-screen overflow-x-hidden"
         id="projects"
       >
         <h1 className="text-5xl bg-blue-500">PROJECTS</h1>

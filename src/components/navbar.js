@@ -100,6 +100,20 @@ function Navbar() {
           <Link
             className="nav-link-container"
             activeClass="active"
+            to="skills"
+            hashSpy={true}
+            spy={true}
+            smooth={true}
+            duration={750}
+            ignoreCancelEvents={true}
+          >
+            <span className="nav-link">
+              Skills <i></i>
+            </span>
+          </Link>
+          <Link
+            className="nav-link-container"
+            activeClass="active"
             to="projects"
             hashSpy={true}
             spy={true}
@@ -112,20 +126,20 @@ function Navbar() {
             </span>
           </Link>
         </div>
-        <div className="justify-end h-1/3 hidden md:flex">
+        <div className="justify-end h-full hidden md:flex space-x-10">
           <SocialIcon
             icon={faInstagram}
-            hoverClass="pink-600"
+            hoverClass="hover:text-pink-600"
             href="https://www.instagram.com/domi7891"
           />
           <SocialIcon
             icon={faLinkedinIn}
-            hoverClass="blue-600"
+            hoverClass="hover:text-blue-600"
             href="https://www.linkedin.com/in/dominik-nossal-07119b219"
           />
           <SocialIcon
             icon={faGithub}
-            hoverClass="gray-400"
+            hoverClass="hover:text-gray-400"
             href="https://github.com/domi7891"
           />
         </div>

@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { Element, Link } from 'react-scroll'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import TypeWriter from 'react-typewriter'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCode } from '@fortawesome/free-solid-svg-icons'
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons'
 
 function HomeScreen() {
   const [typing, setTyping] = useState(1)
@@ -22,14 +22,27 @@ function HomeScreen() {
     }, 1000)
   }
 
+  const parallaxScroll = (e) => {
+    const parallax = window.scrollY / 5
+    document.querySelector('#home-bg').style.top = `-${parallax}px`
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallaxScroll)
+    return () => window.removeEventListener('scroll', parallaxScroll)
+  })
+
   const passionates = [
     'Welcome to my personal Website!',
     'I am a freelance web designer and full-stack developer.',
     "I'm passionate about creating modern Webpages.",
   ]
   return (
-    <Element className="relative overflow-x-hidden">
-      <div className="w-full h-screen absolute top-0 overflow-x-hidden z-[-1]">
+    <Element className="relative overflow-hidden">
+      <div
+        id="home-bg"
+        className="w-full h-screen top-0 z-[-1] fixed transition"
+      >
         <Image
           src="/background.jpg"
           alt=""
@@ -72,6 +85,7 @@ function HomeScreen() {
             </Link>
             <Link
               to="contact"
+              offset={-200}
               hashSpy={true}
               spy={true}
               smooth={true}
@@ -98,10 +112,10 @@ function HomeScreen() {
           </div>
         </Link>
       </center>
-      <div className="hidden lg:flex absolute top-3/4 -translate-y-1/2 left-3/4 -translate-x-1/2 opacity-20 transform rotate-[28deg]">
+      <div className="hidden lg:flex absolute top-3/4 -translate-y-1/2 left-3/4 -translate-x-1/2 opacity-20 transform rotate-0">
         <FontAwesomeIcon
-          icon={faCode}
-          className="w-[400px] xl:w-[500px] text-gray-800"
+          icon={faQuoteRight}
+          className="w-[250px] xl:w-[400px] text-gray-800"
         />
       </div>
       <div className="hidden lg:flex absolute border border-gray-800 border-opacity-40 w-[300px] h-[300px] backdrop-filter backdrop-blur-[2px] top-16 right-10 2xl:right-[20%] rounded-3xl transform rotate-45 z-[-1]"></div>

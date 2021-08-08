@@ -7,7 +7,7 @@ function Menu({ open, setOpen }) {
   return (
     <div
       className={`${
-        open ? 'left-0' : 'left-full  delay-750'
+        open ? 'left-0' : 'left-full  delay-1000'
       } md:hidden flex py-10 flex-col items-center justify-center gap-y-10 fixed z-[60] top-0 bg-black bg-opacity-90 backdrop-filter backdrop-blur-sm w-screen h-screen transition-all duration-500 text-white text-xl menu ${
         open ? 'active' : ''
       }`}
@@ -22,6 +22,9 @@ function Menu({ open, setOpen }) {
       </MenuLink>
       <MenuLink setOpen={setOpen} to="about">
         About
+      </MenuLink>
+      <MenuLink setOpen={setOpen} to="skills">
+        Skills
       </MenuLink>
       <MenuLink setOpen={setOpen} to="projects">
         Projects

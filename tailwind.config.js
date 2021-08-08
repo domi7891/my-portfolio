@@ -10,10 +10,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // amazon_blue: {
-        //   light: "#232F3E",
-        //   DEFAULT: "#131921",
-        // },
+        gray_variant: {
+          light: '#ededed',
+          DEFAULT: '#737373',
+          dark: '#1F1F1F',
+        },
+        orange: {
+          50: '#ffe9d6',
+          100: '#ffd1ab',
+          200: '#ffb578',
+          300: '#ff9a47',
+          400: '#ff821c',
+          500: '#ff7300',
+          600: '#d66100',
+          700: '#b85300',
+          800: '#a34a00',
+          900: '#6e3200',
+        },
+      },
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif'],
       },
       transitionDelay: {
         0: '0ms',
