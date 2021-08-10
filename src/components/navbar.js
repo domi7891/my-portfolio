@@ -21,24 +21,44 @@ import {
 function Navbar() {
   const [open, setOpen] = useState(false)
 
-  function animateHeader() {
-    // console.log(window.scrollY)
+  function animateHeader(e) {
+    // console.log(e.target)
     if (window.scrollY > 0) {
       document.querySelector('#navbar').classList.add('active')
     } else document.querySelector('#navbar').classList.remove('active')
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      document
+        .querySelector('.nav-link-container.active')
+        .classList.remove('active')
+
+      const list = [...document.querySelectorAll('.nav-link-container')]
+      list.pop().classList.add('active')
+    } else if (
+      window.innerHeight + window.scrollY + 10 >=
+      document.body.offsetHeight
+    ) {
+      document
+        .querySelector('.nav-link-container.active')
+        .classList.remove('active')
+
+      const list = [...document.querySelectorAll('.nav-link-container')]
+      list.pop()
+      list.pop().classList.add('active')
+    }
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', animateHeader)
+    window.addEventListener('scroll', (e) => animateHeader(e))
     return () => window.removeEventListener('scroll', animateHeader)
   })
 
-  useEffect(() => {
-    return () => {
-      Events.scrollEvent.remove('begin')
-      Events.scrollEvent.remove('end')
-    }
-  })
+  // useEffect(() => {
+  //   return () => {
+  //     Events.scrollEvent.remove('begin')
+  //     Events.scrollEvent.remove('end')
+  //   }
+  // })
 
   return (
     <div>
@@ -67,7 +87,7 @@ function Navbar() {
             />
           </Link>
         </div>
-        <div className="nav-container justify-center gap-4 hidden md:flex">
+        <div className="nav-container justify-center gap-x-6 hidden md:flex">
           <Link
             className="nav-link-container"
             activeClass="active"
@@ -123,6 +143,21 @@ function Navbar() {
           >
             <span className="nav-link">
               Projects <i></i>
+            </span>
+          </Link>
+          <Link
+            className="nav-link-container"
+            activeClass="active"
+            to="contact"
+            hashSpy={true}
+            spy={true}
+            smooth={true}
+            duration={750}
+            ignoreCancelEvents={true}
+            isDynamic={true}
+          >
+            <span className="nav-link">
+              Contact <i></i>
             </span>
           </Link>
         </div>

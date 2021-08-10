@@ -8,7 +8,7 @@ function MenuLink({ setOpen, to, children }) {
       to={to}
       hashSpy={true}
       spy={true}
-      delay={1000}
+      delay={1500}
       smooth={true}
       duration={750}
       ignoreCancelEvents={true}

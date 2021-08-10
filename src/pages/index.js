@@ -7,8 +7,8 @@ import HomeScreen from '@/components/HomeScreen'
 import AboutScreen from '@/components/AboutScreen'
 import SkillsScreen from '@/components/SkillsScreen'
 import ProjectScreen from '@/components/ProjectScreen'
-
-import Spacer from '@/components/Spacer'
+import ContactScreen from '@/components/ContactScreen'
+import Footer from '@/components/Footer'
 
 import { useEffect, useState } from 'react'
 
@@ -31,6 +31,10 @@ export default function Home() {
       <SkillsScreen />
 
       <ProjectScreen />
+
+      <ContactScreen />
+
+      <Footer />
 
       <SocialSidebar />
     </div>

@@ -41,10 +41,10 @@ function HomeScreen() {
     <Element className="relative overflow-hidden">
       <div
         id="home-bg"
-        className="w-full h-screen top-0 z-[-1] fixed transition"
+        className="w-full h-screen top-0 z-[-2] fixed transition"
       >
         <Image
-          src="/background.jpg"
+          src="/images/background.jpg"
           alt=""
           layout="fill"
           objectFit="cover"

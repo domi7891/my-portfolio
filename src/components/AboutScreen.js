@@ -1,7 +1,7 @@
 import { Element, Link } from 'react-scroll'
 import Image from 'next/image'
 
-import me from '../../public/me.jpg'
+import me from '../../public/images/me.jpg'
 
 function AboutScreen() {
   return (
@@ -18,7 +18,7 @@ function AboutScreen() {
           />
           <div className="w-full h-full rounded-full bg-black bg-opacity-30 z-[2]"></div>
         </div>
-        <div className="relative flex flex-col text-white md:col-span-2 px-12 sm:px-0 sm:pr-28 lg:pr-56 text-justify md:text-left">
+        <div className="relative flex flex-col text-white md:col-span-2 px-12 md:px-0 md:pr-28 lg:pr-56 text-justify md:text-left">
           <div className="mb-16">
             <h1 className="text-3xl mb-5 font-bold">About me</h1>
             <p className="font-light text-gray-400 text-base">
