@@ -1,3 +1,5 @@
+'use client'
+
 import { Element, Link } from 'react-scroll'
 import Image from 'next/image'
 
@@ -53,16 +55,15 @@ function AboutScreen() {
               or use the{' '}
               <Link
                 to="contact"
-                offset={-200}
+                offset={0}
                 hashSpy={true}
                 spy={true}
                 smooth={true}
                 duration={750}
                 ignoreCancelEvents={true}
+                className="link"
               >
-                <a className="link" href="mailto:dominik@nossal.at">
-                  contact form
-                </a>
+                contact form
               </Link>{' '}
               at the end.
             </p>
