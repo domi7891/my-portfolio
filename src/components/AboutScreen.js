@@ -1,5 +1,3 @@
-'use client'
-
 import { Element, Link } from 'react-scroll'
 import Image from 'next/image'
 
