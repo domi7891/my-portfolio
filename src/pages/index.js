@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Navbar from '@/components/Navbar'
 
 import SocialSidebar from '@/components/SocialSidebar'
 
@@ -9,10 +8,7 @@ import SkillsScreen from '@/components/SkillsScreen'
 import ProjectScreen from '@/components/ProjectScreen'
 import ContactScreen from '@/components/ContactScreen'
 import Footer from '@/components/Footer'
-
-import { useEffect, useState } from 'react'
-
-import { Element } from 'react-scroll'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (

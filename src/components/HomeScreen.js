@@ -85,7 +85,6 @@ function HomeScreen() {
             </Link>
             <Link
               to="contact"
-              offset={-200}
               hashSpy={true}
               spy={true}
               smooth={true}

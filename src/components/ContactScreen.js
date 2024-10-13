@@ -1,4 +1,4 @@
-import { useState, useEffect, foreUpdate } from 'react'
+import { useState } from 'react'
 import { Element } from 'react-scroll'
 
 import Spacer from '@/components/Spacer'
@@ -33,9 +33,9 @@ function ContactScreen() {
       />
       <section className="overflow-x-hidden bg-gray_variant-dark text-white w-full mx-auto pt-20 pb-24">
         <h1 className="text-5xl pb-10 text-center">Contact</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 mx-10 md:mx-auto md:w-2/3 lg:w-4/5 xl:w-2/3 xl:mx-auto gap-x-10">
+        <div className="mx-10 md:mx-auto md:w-2/3 lg:w-3/5 xl:w-2/3 gap-x-10">
           <form
-            className="w-full grid grid-cols-2 grid-rows-1 pt-10 gap-y-6 gap-x-10"
+            className="w-full grid grid-cols-2 grid-rows-1 pt-10 gap-y-6 gap-x-10 mx-auto"
             id="contactForm"
             onSubmit={submitForm}
           >

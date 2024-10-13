@@ -1,9 +1,9 @@
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 function MenuLink({ setOpen, to, children }) {
   return (
     <Link
-      className="menu-nav-link-container"
+      className="menu-nav-link-container cursor-pointer"
       activeClass="active"
       to={to}
       hashSpy={true}
