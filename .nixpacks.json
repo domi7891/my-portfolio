@@ -1,0 +1,6 @@
+{
+  "environment": {
+    "NODE_VERSION": "16",
+    "NPM_VERSION": "8"
+  }
+}
